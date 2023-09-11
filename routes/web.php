@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,7 @@ require __DIR__.'/auth.php';
 
 //frontend
 Route::get('/home',[FrontendController::class,'home'])->name('home');
+Route::get('/f_profile',[FrontendController::class,'f_profile'])->name('f_profile');
+
+//backend
+Route::get('/b_dashboard',[PostController::class,'b_dashboard'])->name('b_dashboard');
